@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>DevWiki - A enciclopédia para desenvolvedores</title>
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav id="navbar">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">
+          <span class="brand-icon">&lt;/&gt;</span>
+          Dev<span class="brand-text-wiki">Wiki</span>
+        </a>
+
+        <ul class="right hide-on-med-and-down" style="display: flex; align-items: center;">
+          <li><a href="#">Explorar</a></li>
+          <li><a href="#">Linguagens</a></li>
+          <li><a href="#">Frameworks</a></li>
+          <li><a href="#"><em class="material-icons-outlined">search</em></a></li>
+          <li style="height: 64px; display: flex; align-items: center;">
+            <span class="nav-divider"></span>
+          </li>
+          <li>
+            <a href="https://github.com" target="_blank" class="github-link tooltip" title="GitHub">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-trigger user-icon-link" href="#!" data-target="dropdown-user">
+              <i class="material-icons-outlined">account_circle</i>
+            </a>
+          </li>
+        </ul>
+
+        <ul id="dropdown-user" class="dropdown-content">
+          <li>
+            <a href="#login">
+              <i class="material-icons-outlined">login</i>
+              Entrar
+            </a>
+          </li>
+          <li class="divider" tabindex="-1"></li>
+          <li>
+            <a href="#signup" class="menu-signup-link">
+              <i class="material-icons-outlined">person_add</i>
+              Criar conta
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="fade-up">
+        <span class="badge-pill">✨ A enciclopédia livre para desenvolvedores
+        </span>
+        <p class="hero-subtitle">Documentação, tutoriais e referências técnicas criadas pela comunidade. <br>+50.000 artigos sobre programação.</p>
+      </div>
+      <div class="search-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="search-input-wrapper">
+          <i class="material-icons-outlined grey-text">search</i>
+          <input type="text" placeholder="Buscar documentação, linguagens, frameworks...">
+          <button class="btn waves-effect waves-light btn-search">Buscar</button>
+        </div>
+        <div class="trending-tags" data-aos="fade-up" data-aos-delay="200">
+          <span><i class="material-icons-outlined tiny" style="vertical-align: middle;">trending_up</i> Em alta:</span>
+          <div class="tag-chip">React Hooks</div>
+          <div class="tag-chip">TypeScript Generics</div>
+          <div class="tag-chip">Docker</div>
+        </div>
+        <div class="stats-row" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-item">
+            <h4>50K+</h4>
+            <p>Artigos</p>
+          </div>
+          <div class="stat-item">
+            <h4>120+</h4>
+            <p>Linguagens</p>
+          </div>
+          <div class="stat-item">
+            <h4>500+</h4>
+            <p>Frameworks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore por Categoria -->
+  <section class="section container">
+    <div class="featured-articles-header">
+      <h4 class="featured-articles-title" style="justify-content: center; text-align: center;">
+        <i class="material-icons-outlined tiny cyan-text">category</i> Explore por Categoria
+      </h4>
+      <p class="category-subtitle" style="text-align: center; color: var(--text-muted); margin-top: 0.5rem;">Navegue pela documentação organizada em categorias temáticas para encontrar exatamente o que você precisa.</p>
+    </div>
+    <div class="featured-articles-grid">
+      <div class="custom-card category-card" data-aos="fade-up">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#00e0c6;">code</i></div>
+        <h5>Linguagens</h5>
+        <p>JavaScript, Python, TypeScript, Rust, Go e mais de 100 linguagens de...</p>
+        <span class="category-meta">12.900 <span class="category-meta-label">artigos</span></span>
+      </div>
+      <div class="custom-card category-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#a084fa;">layers</i></div>
+        <h5>Frameworks</h5>
+        <p>React, Vue, Angular, Django, Rails, Spring e frameworks populares.</p>
+        <span class="category-meta">8.200 <span class="category-meta-label">artigos</span></span>
+      </div>
+      <div class="custom-card category-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#ffb300;">storage</i></div>
+        <h5>Banco de Dados</h5>
+        <p>SQL, NoSQL, PostgreSQL, MongoDB, Redis e modelagem de dados.</p>
+        <span class="category-meta">5.400 <span class="category-meta-label">artigos</span></span>
+      </div>
+      <div class="custom-card category-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#00b894;">public</i></div>
+        <h5>Web Development</h5>
+        <p>HTML, CSS, APIs REST, GraphQL, WebSockets e arquitetura web.</p>
+        <span class="category-meta">9.800 <span class="category-meta-label">artigos</span></span>
+      </div>
+      <div class="custom-card category-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#ff7675;">dns</i></div>
+        <h5>Backend</h5>
+        <p>Node.js, microsserviços, arquitetura de sistemas e escalabilidade.</p>
+        <span class="category-meta">6.700 <span class="category-meta-label">artigos</span></span>
+      </div>
+      <div class="custom-card category-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#d291bc;">phone_iphone</i></div>
+        <h5>Mobile</h5>
+        <p>React Native, Flutter, Swift, Kotlin e desenvolvimento mobile.</p>
+        <span class="category-meta">4.200 <span class="category-meta-label">artigos</span></span>
+      </div>
+      <div class="custom-card category-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#00bcd4;">cloud</i></div>
+        <h5>Cloud & DevOps</h5>
+        <p>AWS, Azure, GCP, Docker, Kubernetes e CI/CD.</p>
+        <span class="category-meta">7.100 <span class="category-meta-label">artigos</span></span>
+      </div>
+      <div class="custom-card category-card" data-aos="fade-up" data-aos-delay="700">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#00e676;">security</i></div>
+        <h5>Segurança</h5>
+        <p>Criptografia, autenticação, OWASP e melhores práticas de segurança.</p>
+        <span class="category-meta">3.400 <span class="category-meta-label">artigos</span></span>
+      </div>
+      <div class="custom-card category-card" data-aos="fade-up" data-aos-delay="800">
+        <div class="icon-box"><i class="material-icons-outlined" style="color:#7c83fd;">terminal</i></div>
+        <h5>CLI & Tools</h5>
+        <p>Terminal, shell scripting, ferramentas de linha de comando e automação.</p>
+        <span class="category-meta">2.900 <span class="category-meta-label">artigos</span></span>
+      </div>
+    </div>
+  </section>
+  <div class="featured-articles-header">
+    <h4 class="featured-articles-title">
+      <i class="material-icons-outlined tiny cyan-text">local_fire_department</i> Artigos em Destaque
+    </h4>
+  </div>
+  <div class="featured-articles-grid">
+    <div class="custom-card article-card" data-aos="fade-up">
+      <span class="tag react">React</span>
+      <h5>Introdução aos React Server Components</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 8 min</span></div>
+    </div>
+    <div class="custom-card article-card" data-aos="fade-up" data-aos-delay="100">
+      <span class="tag ts">TypeScript</span>
+      <h5>TypeScript 5.0: Novidades e Migrações</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 12 min</span></div>
+    </div>
+    <div class="custom-card article-card" data-aos="fade-up" data-aos-delay="200">
+      <span class="tag devops">DevOps</span>
+      <h5>Docker do Zero ao Kubernetes</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 25 min</span></div>
+    </div>
+    <div class="custom-card article-card" data-aos="fade-up" data-aos-delay="300">
+      <span class="tag ts">TypeScript</span>
+      <h5>Como usar Decorators no TypeScript</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 10 min</span></div>
+    </div>
+    <div class="custom-card article-card" data-aos="fade-up" data-aos-delay="400">
+      <span class="tag react">React</span>
+      <h5>Hooks Avançados: useReducer e useContext</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 15 min</span></div>
+    </div>
+    <div class="custom-card article-card" data-aos="fade-up" data-aos-delay="500">
+      <span class="tag devops">DevOps</span>
+      <h5>CI/CD com GitHub Actions</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 18 min</span></div>
+    </div>
+    <div class="custom-card article-card" data-aos="fade-up" data-aos-delay="600">
+      <span class="tag ts">TypeScript</span>
+      <h5>Estratégias de Tipagem Avançada</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 14 min</span></div>
+    </div>
+    <div class="custom-card article-card" data-aos="fade-up" data-aos-delay="700">
+      <span class="tag react">React</span>
+      <h5>React Performance: Otimizando Renderizações</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 20 min</span></div>
+    </div>
+    <div class="custom-card article-card" data-aos="fade-up" data-aos-delay="800">
+      <span class="tag devops">DevOps</span>
+      <h5>Monitoramento com Prometheus e Grafana</h5>
+      <div class="meta-row"><span><i class="material-icons-outlined tiny">schedule</i> 22 min</span></div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./src/js/script.js"></script>
+  </section>
+</body>
+
+</html>
